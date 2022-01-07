@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { getData } from "../../api/HttpClient"
 import NewsItem from "./NewsItem"
+import { NewsEntity } from "./NewsItem"
 
 export default function News() {
   const [news, setNews] = useState([])
@@ -18,13 +19,13 @@ export default function News() {
       <h2>News</h2>
       
       <div className="row">
-        {news.map((item: any) => {
+        {news.map((item: NewsEntity) => {
           return (
 
             <div className="col-md-4" key={item.url}>
-              <NewsItem title={item.title} desc={item.description}
-                newsUrl={item.url} imageUrl={item.urlToImage}
-                time={item.publishedAt} />
+              <NewsItem title={item.title} description={item.description}
+                url={item.url} urlToImage={item.urlToImage}
+                publishedAt={item.publishedAt} />
             </div>
           )
         })}

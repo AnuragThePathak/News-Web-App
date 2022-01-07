@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap"
 
 export default function NewsItem(
-  { title, desc, newsUrl, imageUrl }: NewsEntity) {
+  { title, description: desc, url: newsUrl, urlToImage: imageUrl }: NewsEntity) {
 
   return (
     <a href={newsUrl} about="_blank" rel="noopener noreferrer">
@@ -17,10 +17,10 @@ export default function NewsItem(
   )
 }
 
-type NewsEntity = {
+export type NewsEntity = {
   title: string,
-  desc: string,
-  newsUrl: string,
-  imageUrl: string,
-  time: string
+  description: string,
+  url: string,
+  urlToImage: string,
+  publishedAt: string
 }
