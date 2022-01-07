@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap"
 
-const Header = () => {
+export default function Header() {
   return (
     <header className="App-header">
       <Navbar bg="light" expand="lg">
@@ -25,5 +25,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

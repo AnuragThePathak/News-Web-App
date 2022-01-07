@@ -1,19 +1,26 @@
-import { Card, Button } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 
-const NewsItem = () => {
+export default function NewsItem(
+  { title, desc, newsUrl, imageUrl }: NewsEntity) {
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <a href={newsUrl} about="_blank" rel="noopener noreferrer">
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={imageUrl} />
+        
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{desc}</Card.Text>
+        </Card.Body>
+      </Card>
+    </a>
   )
 }
 
-export default NewsItem
+type NewsEntity = {
+  title: string,
+  desc: string,
+  newsUrl: string,
+  imageUrl: string,
+  time: string
+}
