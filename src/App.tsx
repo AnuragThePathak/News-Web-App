@@ -5,8 +5,8 @@ import News from "./components/home/News"
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <News/>
+      <Header />
+      <News />
     </div>
   )
 }
