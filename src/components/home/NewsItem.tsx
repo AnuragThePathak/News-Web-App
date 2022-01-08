@@ -1,23 +1,23 @@
 import { Card } from "react-bootstrap"
 
 export default function NewsItem(
-  { title, description: desc, url: newsUrl, urlToImage: imageUrl }: NewsEntity) {
+  { title, description, url, urlToImage }: News) {
 
   return (
-    <a href={newsUrl} about="_blank" rel="noopener noreferrer">
+    <a href={url} about="_blank" rel="noopener noreferrer">
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={imageUrl} />
+        <Card.Img variant="top" src={urlToImage} />
         
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>{desc}</Card.Text>
+          <Card.Text>{description}</Card.Text>
         </Card.Body>
       </Card>
     </a>
   )
 }
 
-export type NewsEntity = {
+export type News = {
   title: string,
   description: string,
   url: string,
