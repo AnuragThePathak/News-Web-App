@@ -11,10 +11,10 @@ export default function NewsList() {
     "top-headlines/category/general/in.json"
 
   useEffect(() => {
-    getData(url).then((data: any) => {
+    getData(url).then((data) => {
       setNewsArray(data.articles)
     })
-  }, [newsArray])
+  }, [])
 
   return (
     <div className="container my-4">
