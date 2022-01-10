@@ -7,11 +7,11 @@ export default function NewsList() {
   const [newsArray, setNewsArray] = useState([] as News[])
 
   const BASE_URL = "https://saurav.tech/NewsAPI/"
-  const url = BASE_URL +
+  const URL = BASE_URL +
     "top-headlines/category/general/in.json"
 
   useEffect(() => {
-    getData(url).then((data) => {
+    getData(URL).then((data) => {
       setNewsArray(data.articles)
     })
   }, [])
@@ -25,7 +25,7 @@ export default function NewsList() {
         ) => {
           return (
 
-            <div className="col-md-4" key={url}>
+            <div className="col-md-4" key={news.url}>
               <NewsItem news={news} />
             </div>
           )
