@@ -21,14 +21,12 @@ export default function NewsList() {
       <h2>News</h2>
 
       <div className="row">
-        {newsArray.map(({ title, description, url, urlToImage, publishedAt }
+        {newsArray.map((news
         ) => {
           return (
 
             <div className="col-md-4" key={url}>
-              <NewsItem title={title} description={description}
-                url={url} urlToImage={urlToImage}
-                publishedAt={publishedAt} />
+              <NewsItem news={news} />
             </div>
           )
         })}
