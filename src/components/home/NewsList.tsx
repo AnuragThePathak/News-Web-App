@@ -3,18 +3,19 @@ import { getData } from "../../api/HttpClient"
 import NewsItem from "./NewsItem"
 import { News } from "./NewsItem"
 
-export default function NewsList() {
-  const [newsArray, setNewsArray] = useState([] as News[])
+export default function NewsList({ category, country }: 
+  { category: string, country: string }) {
+  const URL
+    = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`
 
-  const BASE_URL = "https://saurav.tech/NewsAPI/"
-  const URL = BASE_URL +
-    "top-headlines/category/general/in.json"
+
+  const [newsArray, setNewsArray] = useState([] as News[])
 
   useEffect(() => {
     getData(URL).then((data) => {
       setNewsArray(data.articles)
     })
-  }, [])
+  }, [URL])
 
   return (
     <div className="container my-4">

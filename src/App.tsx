@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from "./components/home/Header"
-import NewsList from "./components/home/NewsList"
+import Home from "./components/home/Home"
 
 function App() {
+  const country = "in"
+  
   return (
     <div className="App">
       <Header />
-      <NewsList />
+      <Home country={country} category="general"/>
     </div>
   )
 }
