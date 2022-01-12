@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
-import { getData } from "../../api/HttpClient"
-import NewsItem from "./NewsItem"
-import { News } from "./NewsItem"
+import { useParams } from "react-router-dom"
+import { getData } from "../api/HttpClient"
+import NewsItem, { News } from "./NewsItem"
+import NoMatch from "./NoMatch"
 
-export default function NewsList({ category, country }: 
-  { category: string, country: string }) {
+export default function NewsList({ country }:
+  { country: string }) {
+  const { category } = useParams()
   const URL
-    = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`
+    = `https://saurav.tech/NewsAPI/top-headlines/category/${category || "general"}/${country}.json`
 
 
   const [newsArray, setNewsArray] = useState([] as News[])
@@ -22,7 +24,7 @@ export default function NewsList({ category, country }:
       <h2>News</h2>
 
       <div className="row">
-        {newsArray.map((news
+        {newsArray ? newsArray.map((news
         ) => {
           return (
 
@@ -30,7 +32,7 @@ export default function NewsList({ category, country }:
               <NewsItem news={news} />
             </div>
           )
-        })}
+        }) : <NoMatch message="The requested category doesn't exist." />}
       </div>
     </div>
   )
