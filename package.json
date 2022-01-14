@@ -1,11 +1,10 @@
 {
   "name": "news-web-app",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": {
     "name": "Anurag Pathak",
     "email": "anuragpathak911@gmail.com"
   },
-  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
