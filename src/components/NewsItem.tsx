@@ -4,7 +4,7 @@ export default function NewsItem({ news }: { news: News }) {
 
   return (
     <a href={news.url} about="_blank" rel="noopener noreferrer">
-      <Card style={{ width: '18rem' }}>
+      <Card>
         <Card.Img variant="top" src={news.urlToImage} />
 
         <Card.Body>

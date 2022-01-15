@@ -28,7 +28,7 @@ export default function NewsList({ country }:
         ) => {
           return (
 
-            <div className="col-md-4" key={news.url}>
+            <div className="col-md-4 col-sm-6" key={news.url}>
               <NewsItem news={news} />
             </div>
           )
