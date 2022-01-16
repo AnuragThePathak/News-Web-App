@@ -2,7 +2,8 @@
 
 Web Version of [News Feed App](https://github.com/AnuragThePathak/News-Feed-App).
 
-- News Feed App is a web app that fetches news from various news sources and displays them on a web page.
+- Read News is a web app that fetches news from various news sources and displays them on a web page.
+- You will get news of total 7 categories which are Business, Entertainment, General, Health, Science, Sports, Technology.
 - It uses a [News API](https://github.com/SauravKanchan/NewsAPI) to fetch news.
 - It uses [React](https://reactjs.org/) and [React Router](https://reactrouter.com/) to render the news.
 - It uses [Bootstrap](https://react-bootstrap.github.io/) to style the news.
