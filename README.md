@@ -2,7 +2,7 @@
 
 Web Version of [News Feed App](https://github.com/AnuragThePathak/News-Feed-App).
 
-- Read News is a web app that fetches news from various news sources and displays them on a web page.
+- **Read News** is a web app that fetches news from various news sources and displays them on a web page.
 - You will get news of total 7 categories which are Business, Entertainment, General, Health, Science, Sports, Technology.
 - It uses a [News API](https://github.com/SauravKanchan/NewsAPI) to fetch news.
 - It uses [React](https://reactjs.org/) and [React Router](https://reactrouter.com/) to render the news.
@@ -33,6 +33,6 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Your app is ready to be deployed!*
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
